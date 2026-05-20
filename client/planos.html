@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criar Conta</title>
+  
+  <link rel="stylesheet" href="style.css" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            principal: 'var(--bg-principal)',
+            card: 'var(--bg-card)',
+            inputBg: 'var(--bg-input)',
+            marca: 'var(--cor-marca)',
+            marcaHover: 'var(--cor-marca-hover)',
+            detalhe: 'var(--cor-detalhe)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+
+
+<body class="bg-[var(--bg-principal)] text-[var(--texto-claro)] font-['Poppins'] min-h-screen flex flex-col m-0">
+
+  <header class="flex flex-col md:flex-row justify-between items-center p-5 bg-card border-b border-inputBg gap-4">
+    <div class="logo text-2xl font-black text-white">
+      <a href="index.html">Orça<span class="text-marca">Fácil</span></a>
+    </div>
+    <nav class="flex gap-5 text-sm md:text-base">
+      <a href="index.html" class="hover:text-marca transition-colors">Início</a>
+      <a href="criarconta.html" class="hover:text-marca transition-colors">Meus Orçamentos</a>
+      <a href="sobrenos.html" class="hover:text-marca transition-colors">Sobre Nós</a>
+      <a href="planos.html" class="hover:text-marca transition-colors">Planos</a>
+    </nav>
+    <a href="criarconta.html" class="bg-marca text-principal font-bold px-5 py-2 rounded-lg hover:bg-marcaHover transition-colors text-sm">
+      Criar Conta →
+    </a>
+  </header>
+
+  <main class="flex-grow max-w-7xl mx-auto w-full px-6 py-12">
+    
+    <p class="text-3xl md:text-5xl font-black text-center mb-4 leading-tight">
+      O <span class="text-[var(--cor-marca)]">plano ideal</span> para o seu negócio, tem na OrçaFácil!
+    </p>
+    <p class="text-lg md:text-xl text-center text-[var(--texto-mutado)] mb-12">
+      Comece grátis e sem inserir dados de pagamento.
+    </p>
+
+    <div class="border border-zinc-800 rounded-3xl p-8 md:p-10 max-w-5xl mx-auto text-center mb-16 bg-black/20">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8">
+        Recursos <span class="text-[var(--cor-marca)]">ilimitados</span> em todos os planos
+      </h2>
+      <div class="flex flex-col gap-4 items-center">
+        <div class="text-base md:text-lg bg-[var(--bg-card)] border border-zinc-800 hover:border-[var(--cor-marca)] hover:bg-[var(--cor-marca)] hover:text-black p-4 rounded-xl w-full max-w-4xl text-left transition-all duration-300 shadow-sm cursor-default">
+          ✔ Emissão de notas fiscais
+        </div>
+        <div class="text-base md:text-lg bg-[var(--bg-card)] border border-zinc-800 hover:border-[var(--cor-marca)] hover:bg-[var(--cor-marca)] hover:text-black p-4 rounded-xl w-full max-w-4xl text-left transition-all duration-300 shadow-sm cursor-default">
+          ✔ Integração com marketplaces, lojas virtuais, loja física, logística, e muito +
+        </div>
+        <div class="text-base md:text-lg bg-[var(--bg-card)] border border-zinc-800 hover:border-[var(--cor-marca)] hover:bg-[var(--cor-marca)] hover:text-black p-4 rounded-xl w-full max-w-4xl text-left transition-all duration-300 shadow-sm cursor-default">
+          ✔ Atualização automática de pedidos e estoque
+        </div>
+      </div>
+    </div>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+      
+      <div class="bg-[var(--bg-card)] border border-zinc-800 rounded-2xl p-6 text-center flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1.5 shadow-lg">
+        <div>
+          <h2 class="text-2xl font-black text-[var(--cor-marca)] mb-2">Base</h2>
+          <p class="text-xs text-[var(--texto-mutado)] min-h-[40px] flex items-center justify-center">Para quem precisa controlar a operação de vendas de um jeito descomplicado</p>
+          <h3 class="text-xl font-bold my-6">R$ <span class="text-3xl font-black text-[var(--cor-marca)]">55</span> /mês</h3>
+          <a href="criarconta.html" class="block w-full text-center bg-[var(--cor-marca)] hover:bg-[var(--cor-marca-hover)] text-black font-bold py-3 px-6 rounded-lg mb-6 transition-colors text-sm">
+            Comece grátis
+          </a>
+          <ul class="text-left text-xs text-[var(--texto-mutado)] space-y-3 border-t border-zinc-800/60 pt-4">
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">5 usuários</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">60 MB de dados</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">1.5 GB de arquivos</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">200 importações de pedidos em marketplaces</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">Gestão automática de estoque</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">Gestão de vendas multicanal</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">Controle de contas a pagar e receber</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">Meios de pagamento e Conta Digital PJ</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-[var(--bg-card)] border border-zinc-800 rounded-2xl p-6 text-center flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1.5 shadow-lg">
+        <div>
+          <h2 class="text-2xl font-black text-[var(--cor-marca)] mb-2">Plus</h2>
+          <p class="text-xs text-[var(--texto-mutado)] min-h-[40px] flex items-center justify-center">Para quem quer fazer a gestão completa do negócio em uma única plataforma</p>
+          <h3 class="text-xl font-bold my-6">R$ <span class="text-3xl font-black text-[var(--cor-marca)]">110</span> /mês</h3>
+          <a href="criarconta.html" class="block w-full text-center bg-[var(--cor-marca)] hover:bg-[var(--cor-marca-hover)] text-black font-bold py-3 px-6 rounded-lg mb-6 transition-colors text-sm">
+            Comece grátis
+          </a>
+          <ul class="text-left text-xs text-[var(--texto-mutado)] space-y-3 border-t border-zinc-800/60 pt-4">
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">10 usuários</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">120 MB de dados</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">3 GB de arquivos</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">500 importações de pedidos</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">Tudo do Plano Base</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">Gestão financeira completa</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">Boletos e conciliação bancária</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">PDV</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-[var(--bg-card)] border border-[var(--cor-marca)] border-opacity-50 rounded-2xl p-6 text-center flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1.5 shadow-[0_0_20px_rgba(26,246,96,0.1)] relative">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[var(--cor-marca)] text-black font-black text-[10px] uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">Mais Vendido</span>
+        <div>
+          <h2 class="text-2xl font-black text-[var(--cor-marca)] mb-2">Premium</h2>
+          <p class="text-xs text-[var(--texto-mutado)] min-h-[40px] flex items-center justify-center">Para quem busca otimizar processos com automações e dashboards com mais agilidade</p>
+          <h3 class="text-xl font-bold my-6">R$ <span class="text-3xl font-black text-[var(--cor-marca)]">185</span> /mês</h3>
+          <a href="criarconta.html" class="block w-full text-center bg-[var(--cor-marca)] hover:bg-[var(--cor-marca-hover)] text-black font-bold py-3 px-6 rounded-lg mb-6 transition-colors text-sm">
+            Comece grátis
+          </a>
+          <ul class="text-left text-xs text-[var(--texto-mutado)] space-y-3 border-t border-zinc-800/60 pt-4">
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">15 usuários</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">360 MB de dados</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">9 GB de arquivos</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">2 mil importações de pedidos</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">Tudo do Plano Plus</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">Impressão automática de etiquetas</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">Dashboards com até 3 contas</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">Integração com 1 POS</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-[var(--bg-card)] border border-zinc-800 rounded-2xl p-6 text-center flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1.5 shadow-lg">
+        <div>
+          <h2 class="text-2xl font-black text-[var(--cor-marca)] mb-2">Ultimate</h2>
+          <p class="text-xs text-[var(--texto-mutado)] min-h-[40px] flex items-center justify-center">Para quem busca ter automação de ponta para empresas de grande porte</p>
+          <h3 class="text-xl font-bold my-6">R$ <span class="text-3xl font-black text-[var(--cor-marca)]">450</span> /mês</h3>
+          <a href="criarconta.html" class="block w-full text-center bg-[var(--cor-marca)] hover:bg-[var(--cor-marca-hover)] text-black font-bold py-3 px-6 rounded-lg mb-6 transition-colors text-sm">
+            Comece grátis
+          </a>
+          <ul class="text-left text-xs text-[var(--texto-mutado)] space-y-3 border-t border-zinc-800/60 pt-4">
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">50 usuários</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">1,2 GB de dados</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">30 GB de arquivos</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">7 mil importações de pedidos</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">Tudo do Plano Premium</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">Impressão automática de etiquetas</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">Dashboards com até 7 contas</li>
+            <li class="relative pl-5 before:content-['✔'] before:absolute before:left-0 before:text-[var(--cor-marca)]">Integração com 3 POS</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="bg-[#1a1a1a] text-gray-400 py-10 px-6 mt-10 border-t border-[#2c2c2c]">
+    <div class="max-w-6xl mx-auto flex flex-col gap-8">
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-white font-bold mb-3">OrçaFácil</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Conheça o OrçaFácil</li>
+            <li class="hover:text-white cursor-pointer">Planos e Preços</li>
+            <li class="hover:text-white cursor-pointer">Contato</li>
+            <li class="hover:text-white cursor-pointer">Carreiras</li>
+            <li class="hover:text-white cursor-pointer">Manual de Marca</li>
+            <li class="hover:text-white cursor-pointer">Segurança e Privacidade</li>
+            <li class="hover:text-white cursor-pointer">Termos de uso</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-3">Usando OrçaFácil</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Orça Academy</li>
+            <li class="hover:text-white cursor-pointer">Implantação Guiada</li>
+            <li class="hover:text-white cursor-pointer">Treinamento ao vivo</li>
+            <li class="hover:text-white cursor-pointer">Central de ajuda</li>
+            <li class="hover:text-white cursor-pointer">Youtube</li>
+            <li class="hover:text-white cursor-pointer">Blog</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-3">Parceiros</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Parceiros Top Especialistas</li>
+            <li class="hover:text-white cursor-pointer">Parceiros Afiliados</li>
+            <li class="hover:text-white cursor-pointer">API e Aplicativos</li>
+            <li class="hover:text-white cursor-pointer">Clube de Vantagens</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-3">Fale Conosco</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Chat Online</li>
+            <li class="hover:text-white cursor-pointer">Telefone</li>
+            <li class="hover:text-white cursor-pointer">WhatsApp</li>
+            <li class="hover:text-white cursor-pointer">Email</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-[#2c2c2c] my-4"></div>
+
+      <h4 class="text-center text-xs text-gray-500 leading-relaxed">
+        OrçaFácil — 2025 – © Todos os direitos reservados. LWSA – Filial OrçaFácil. CNPJ: 02.351.877/0011-24
+      </h4>
+    </div>
+  </footer>
+
+</body>
+
+</html>

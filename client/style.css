@@ -1,0 +1,16 @@
+:root {
+  --bg-principal: #0c0f0c;
+  --bg-card: #1a1a1a;
+  --bg-input: #2c2c2c;
+  
+  --cor-marca: #1af660;
+  --cor-marca-hover: #14d850;
+  --cor-detalhe: #a259ff;
+  
+  --texto-claro: #ffffff;
+  --texto-mutado: #9ca3af;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}

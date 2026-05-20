@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criar Conta</title>
+  
+  <link rel="stylesheet" href="style.css" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            principal: 'var(--bg-principal)',
+            card: 'var(--bg-card)',
+            inputBg: 'var(--bg-input)',
+            marca: 'var(--cor-marca)',
+            marcaHover: 'var(--cor-marca-hover)',
+            detalhe: 'var(--cor-detalhe)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+
+<body class="bg-principal text-white min-h-screen flex flex-col justify-between">
+
+  <header class="flex flex-col md:flex-row justify-between items-center p-5 bg-card border-b border-inputBg gap-4">
+    <div class="logo text-2xl font-black text-white">
+      <a href="index.html">Orça<span class="text-marca">Fácil</span></a>
+    </div>
+    <nav class="flex gap-5 text-sm md:text-base">
+      <a href="index.html" class="hover:text-marca transition-colors">Início</a>
+      <a href="orcamentos.html" class="hover:text-marca transition-colors">Meus Orçamentos</a>
+      <a href="sobrenos.html" class="hover:text-marca transition-colors">Sobre Nós</a>
+      <a href="planos.html" class="hover:text-marca transition-colors">Planos</a>
+    </nav>
+    <a href="criarconta.html" class="bg-marca text-principal font-bold px-5 py-2 rounded-lg hover:bg-marcaHover transition-colors text-sm">
+      Criar Conta →
+    </a>
+  </header>
+
+  <main class="flex-1 flex justify-center items-center px-5 py-10">
+    <div class="bg-card p-8 md:p-10 rounded-2xl shadow-[0_0_25px_rgba(26,246,96,0.2)] max-w-[500px] w-full">
+      <h2 class="text-center text-2xl md:text-3xl font-bold text-marca mb-8">Crie sua Conta</h2>
+      
+      <form action="orçamentos.html" method="POST" class="flex flex-col">
+        <label for="nome" class="block font-semibold mb-1 text-sm text-gray-300">Nome Completo</label>
+        <input type="text" id="nome" class="w-full p-3 mb-5 rounded-lg bg-inputBg text-white border border-transparent focus:outline-none focus:ring-2 focus:ring-marca transition-all" required />
+
+        <label for="usuario" class="block font-semibold mb-1 text-sm text-gray-300">Usuário</label>
+        <input type="text" id="usuario" class="w-full p-3 mb-5 rounded-lg bg-inputBg text-white border border-transparent focus:outline-none focus:ring-2 focus:ring-marca transition-all" required />
+
+        <label for="email" class="block font-semibold mb-1 text-sm text-gray-300">E-mail</label>
+        <input type="email" id="email" class="w-full p-3 mb-5 rounded-lg bg-inputBg text-white border border-transparent focus:outline-none focus:ring-2 focus:ring-marca transition-all" required />
+
+        <label for="senha" class="block font-semibold mb-1 text-sm text-gray-300">Senha</label>
+        <input type="password" id="senha" class="w-full p-3 mb-5 rounded-lg bg-inputBg text-white border border-transparent focus:outline-none focus:ring-2 focus:ring-marca transition-all" required />
+
+        <label for="cpfcnpj" class="block font-semibold mb-1 text-sm text-gray-300">CPF ou CNPJ</label>
+        <input type="text" id="cpfcnpj" class="w-full p-3 mb-5 rounded-lg bg-inputBg text-white border border-transparent focus:outline-none focus:ring-2 focus:ring-marca transition-all" required />
+
+        <label for="telefone" class="block font-semibold mb-1 text-sm text-gray-300">Telefone</label>
+        <input type="tel" id="telefone" class="w-full p-3 mb-5 rounded-lg bg-inputBg text-white border border-transparent focus:outline-none focus:ring-2 focus:ring-marca transition-all" required />
+
+        <label for="area" class="block font-semibold mb-1 text-sm text-gray-300">Área de atuação</label>
+        <select id="area" class="w-full p-3 mb-6 rounded-lg bg-inputBg text-white border border-transparent focus:outline-none focus:ring-2 focus:ring-marca transition-all appearance-none" required>
+          <option value="">Selecione uma opção</option>
+          <option value="construcao">Construção Civil</option>
+          <option value="eletrica">Serviços Elétricos</option>
+          <option value="mecanica">Mecânica</option>
+          <option value="limpeza">Serviços de Limpeza</option>
+          <option value="outros">Outros</option>
+        </select>
+
+        <button type="submit" class="w-full p-3 bg-marca text-principal font-bold rounded-lg hover:bg-marcaHover transition-colors cursor-pointer">
+          Cadastrar
+        </button>
+      </form>
+      
+      <a href="index.html" class="block mt-4 text-detalhe hover:underline text-sm text-center md:text-left">
+        ← Voltar para o início
+      </a>
+    </div>
+  </main>
+
+  <footer class="bg-[#1a1a1a] text-gray-400 py-10 px-6 mt-10 border-t border-[#2c2c2c]">
+    <div class="max-w-6xl mx-auto flex flex-col gap-8">
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-white font-bold mb-3">OrçaFácil</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Conheça o OrçaFácil</li>
+            <li class="hover:text-white cursor-pointer">Planos e Preços</li>
+            <li class="hover:text-white cursor-pointer">Contato</li>
+            <li class="hover:text-white cursor-pointer">Carreiras</li>
+            <li class="hover:text-white cursor-pointer">Manual de Marca</li>
+            <li class="hover:text-white cursor-pointer">Segurança e Privacidade</li>
+            <li class="hover:text-white cursor-pointer">Termos de uso</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-3">Usando OrçaFácil</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Orça Academy</li>
+            <li class="hover:text-white cursor-pointer">Implantação Guiada</li>
+            <li class="hover:text-white cursor-pointer">Treinamento ao vivo</li>
+            <li class="hover:text-white cursor-pointer">Central de ajuda</li>
+            <li class="hover:text-white cursor-pointer">Youtube</li>
+            <li class="hover:text-white cursor-pointer">Blog</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-3">Parceiros</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Parceiros Top Especialistas</li>
+            <li class="hover:text-white cursor-pointer">Parceiros Afiliados</li>
+            <li class="hover:text-white cursor-pointer">API e Aplicativos</li>
+            <li class="hover:text-white cursor-pointer">Clube de Vantagens</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-3">Fale Conosco</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Chat Online</li>
+            <li class="hover:text-white cursor-pointer">Telefone</li>
+            <li class="hover:text-white cursor-pointer">WhatsApp</li>
+            <li class="hover:text-white cursor-pointer">Email</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-[#2c2c2c] my-4"></div>
+
+      <h4 class="text-center text-xs text-gray-500 leading-relaxed">
+        OrçaFácil — 2025 – © Todos os direitos reservados. LWSA – Filial OrçaFácil. CNPJ: 02.351.877/0011-24
+      </h4>
+    </div>
+  </footer>
+
+</body>
+</html>

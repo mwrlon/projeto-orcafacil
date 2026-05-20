@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criar Conta</title>
+  
+  <link rel="stylesheet" href="style.css" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            principal: 'var(--bg-principal)',
+            card: 'var(--bg-card)',
+            inputBg: 'var(--bg-input)',
+            marca: 'var(--cor-marca)',
+            marcaHover: 'var(--cor-marca-hover)',
+            detalhe: 'var(--cor-detalhe)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+
+<body class="bg-[var(--bg-principal)] text-[var(--texto-claro)] font-['Poppins'] min-h-screen flex flex-col m-0">
+
+  <header class="flex flex-col md:flex-row justify-between items-center p-5 bg-card border-b border-inputBg gap-4">
+    <div class="logo text-2xl font-black text-white">
+      <a href="index.html">Orça<span class="text-marca">Fácil</span></a>
+    </div>
+    <nav class="flex gap-5 text-sm md:text-base">
+      <a href="index.html" class="hover:text-marca transition-colors">Início</a>
+      <a href="orcamentos.html" class="hover:text-marca transition-colors">Meus Orçamentos</a>
+      <a href="sobrenos.html" class="hover:text-marca transition-colors">Sobre Nós</a>
+      <a href="planos.html" class="hover:text-marca transition-colors">Planos</a>
+    </nav>
+    <a href="criarconta.html" class="bg-marca text-principal font-bold px-5 py-2 rounded-lg hover:bg-marcaHover transition-colors text-sm">
+      Criar Conta →
+    </a>
+  </header>
+
+  <main class="flex-grow flex items-center justify-center px-6 py-16">
+    <div class="max-w-4xl mx-auto text-center border border-zinc-800/60 rounded-[30px] p-8 md:p-24 bg-black/20 backdrop-blur-sm shadow-xl">
+      
+      <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-none text-[var(--texto-claro)]">
+        CHEGA DE COMPLICAÇÃO.
+      </h1>
+      
+      <p class="text-base md:text-xl text-[var(--texto-mutado)] leading-relaxed max-w-3xl mx-auto mb-10">
+        O OrçaFácil nasceu para resolver um problema real: a dificuldade que pequenos empreendedores enfrentam para
+        criar orçamentos rápidos, bonitos e organizados.
+        Pensamos em cada detalhe para ajudar profissionais autônomos, MEIs e lojistas a passarem mais profissionalismo,
+        economizando tempo e conquistando mais clientes.
+        Nosso compromisso é com a simplicidade, a eficiência e o seu sucesso.
+      </p>
+      
+      <div class="text-xs md:text-sm text-[var(--cor-marca)] font-black tracking-[3px] uppercase">
+        RÁPIDO • PROFISSIONAL • GRATUITO
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-[#1a1a1a] text-gray-400 py-10 px-6 mt-10 border-t border-[#2c2c2c]">
+    <div class="max-w-6xl mx-auto flex flex-col gap-8">
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-white font-bold mb-3">OrçaFácil</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Conheça o OrçaFácil</li>
+            <li class="hover:text-white cursor-pointer">Planos e Preços</li>
+            <li class="hover:text-white cursor-pointer">Contato</li>
+            <li class="hover:text-white cursor-pointer">Carreiras</li>
+            <li class="hover:text-white cursor-pointer">Manual de Marca</li>
+            <li class="hover:text-white cursor-pointer">Segurança e Privacidade</li>
+            <li class="hover:text-white cursor-pointer">Termos de uso</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-3">Usando OrçaFácil</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Orça Academy</li>
+            <li class="hover:text-white cursor-pointer">Implantação Guiada</li>
+            <li class="hover:text-white cursor-pointer">Treinamento ao vivo</li>
+            <li class="hover:text-white cursor-pointer">Central de ajuda</li>
+            <li class="hover:text-white cursor-pointer">Youtube</li>
+            <li class="hover:text-white cursor-pointer">Blog</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-3">Parceiros</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Parceiros Top Especialistas</li>
+            <li class="hover:text-white cursor-pointer">Parceiros Afiliados</li>
+            <li class="hover:text-white cursor-pointer">API e Aplicativos</li>
+            <li class="hover:text-white cursor-pointer">Clube de Vantagens</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-3">Fale Conosco</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Chat Online</li>
+            <li class="hover:text-white cursor-pointer">Telefone</li>
+            <li class="hover:text-white cursor-pointer">WhatsApp</li>
+            <li class="hover:text-white cursor-pointer">Email</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-[#2c2c2c] my-4"></div>
+
+      <h4 class="text-center text-xs text-gray-500 leading-relaxed">
+        OrçaFácil — 2025 – © Todos os direitos reservados. LWSA – Filial OrçaFácil. CNPJ: 02.351.877/0011-24
+      </h4>
+    </div>
+  </footer>
+
+</body>
+
+</html>

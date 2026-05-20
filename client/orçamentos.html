@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criar Conta</title>
+  
+  <link rel="stylesheet" href="style.css" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            principal: 'var(--bg-principal)',
+            card: 'var(--bg-card)',
+            inputBg: 'var(--bg-input)',
+            marca: 'var(--cor-marca)',
+            marcaHover: 'var(--cor-marca-hover)',
+            detalhe: 'var(--cor-detalhe)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+
+<body class="bg-[var(--bg-principal)] text-[var(--texto-claro)] font-['Poppins'] min-h-screen flex flex-col m-0">
+
+  <header class="flex flex-col md:flex-row justify-between items-center p-5 bg-card border-b border-inputBg gap-4">
+    <div class="logo text-2xl font-black text-white">
+      <a href="index.html">Orça<span class="text-marca">Fácil</span></a>
+    </div>
+    <nav class="flex gap-5 text-sm md:text-base">
+      <a href="index.html" class="hover:text-marca transition-colors">Início</a>
+      <a href="criarconta.html" class="hover:text-marca transition-colors">Meus Orçamentos</a>
+      <a href="sobrenos.html" class="hover:text-marca transition-colors">Sobre Nós</a>
+      <a href="planos.html" class="hover:text-marca transition-colors">Planos</a>
+    </nav>
+    <a href="criarconta.html" class="bg-marca text-principal font-bold px-5 py-2 rounded-lg hover:bg-marcaHover transition-colors text-sm">
+      Criar Conta →
+    </a>
+  </header>
+
+  <main class="flex-grow">
+    <h1 class="text-center mt-8 text-4xl font-extrabold text-[var(--cor-marca)]">Meus Orçamentos</h1>
+
+    <div class="grid grid-columns-1 md:grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-8 p-8 max-w-7xl mx-auto w-full">
+      
+      <div class="bg-[var(--bg-card)] border border-[var(--cor-marca)] border-opacity-40 rounded-xl p-6 transition-transform duration-200 hover:-translate-y-1 shadow-[0_0_15px_rgba(26,246,96,0.15)] flex flex-col justify-between">
+        <div>
+          <h2 class="text-xl font-bold mb-3 text-[var(--cor-marca)]">Empresa A</h2>
+          <div class="space-y-1.5 text-sm">
+            <p><strong class="text-[var(--texto-mutado)]">CNPJ:</strong> 12.345.678/0001-90</p>
+            <p><strong class="text-[var(--texto-mutado)]">Produto:</strong> Caneta</p>
+            <p><strong class="text-[var(--texto-mutado)]">Quantidade:</strong> 10</p>
+            <p><strong class="text-[var(--texto-mutado)]">Preço Unitário:</strong> R$ 1,50</p>
+            <p><strong class="text-[var(--texto-mutado)]">Total:</strong> R$ 15,00</p>
+          </div>
+          <span class="inline-block mt-4 text-xs font-bold px-3 py-1.5 rounded-md bg-[#2ecc71] text-black">Aprovado</span>
+        </div>
+        <a href="#" class="mt-5 inline-block text-center text-sm font-bold border border-[var(--cor-marca)] text-[var(--cor-marca)] hover:bg-[var(--cor-marca)] hover:text-black py-2.5 px-4 rounded-lg transition-all duration-300"
+          onclick="gerarPDF('Empresa A','12.345.678/0001-90','Caneta','10','R$ 1,50','R$ 15,00','Aprovado')">
+          📥 Baixar PDF
+        </a>
+      </div>
+
+      <div class="bg-[var(--bg-card)] border border-[var(--cor-marca)] border-opacity-40 rounded-xl p-6 transition-transform duration-200 hover:-translate-y-1 shadow-[0_0_15px_rgba(26,246,96,0.15)] flex flex-col justify-between">
+        <div>
+          <h2 class="text-xl font-bold mb-3 text-[var(--cor-marca)]">Empresa B</h2>
+          <div class="space-y-1.5 text-sm">
+            <p><strong class="text-[var(--texto-mutado)]">CNPJ:</strong> 98.765.432/0001-01</p>
+            <p><strong class="text-[var(--texto-mutado)]">Produto:</strong> Caderno</p>
+            <p><strong class="text-[var(--texto-mutado)]">Quantidade:</strong> 5</p>
+            <p><strong class="text-[var(--texto-mutado)]">Preço Unitário:</strong> R$ 10,00</p>
+            <p><strong class="text-[var(--texto-mutado)]">Total:</strong> R$ 50,00</p>
+          </div>
+          <span class="inline-block mt-4 text-xs font-bold px-3 py-1.5 rounded-md bg-[var(--cor-detalhe)] text-black">Pendente</span>
+        </div>
+        <a href="#" class="mt-5 inline-block text-center text-sm font-bold border border-[var(--cor-marca)] text-[var(--cor-marca)] hover:bg-[var(--cor-marca)] hover:text-black py-2.5 px-4 rounded-lg transition-all duration-300"
+          onclick="gerarPDF('Empresa B','98.765.432/0001-01','Caderno','5','R$ 10,00','R$ 50,00','Pendente')">
+          📥 Baixar PDF
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-[#1a1a1a] text-gray-400 py-10 px-6 mt-10 border-t border-[#2c2c2c]">
+    <div class="max-w-6xl mx-auto flex flex-col gap-8">
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-white font-bold mb-3">OrçaFácil</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Conheça o OrçaFácil</li>
+            <li class="hover:text-white cursor-pointer">Planos e Preços</li>
+            <li class="hover:text-white cursor-pointer">Contato</li>
+            <li class="hover:text-white cursor-pointer">Carreiras</li>
+            <li class="hover:text-white cursor-pointer">Manual de Marca</li>
+            <li class="hover:text-white cursor-pointer">Segurança e Privacidade</li>
+            <li class="hover:text-white cursor-pointer">Termos de uso</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-3">Usando OrçaFácil</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Orça Academy</li>
+            <li class="hover:text-white cursor-pointer">Implantação Guiada</li>
+            <li class="hover:text-white cursor-pointer">Treinamento ao vivo</li>
+            <li class="hover:text-white cursor-pointer">Central de ajuda</li>
+            <li class="hover:text-white cursor-pointer">Youtube</li>
+            <li class="hover:text-white cursor-pointer">Blog</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-3">Parceiros</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Parceiros Top Especialistas</li>
+            <li class="hover:text-white cursor-pointer">Parceiros Afiliados</li>
+            <li class="hover:text-white cursor-pointer">API e Aplicativos</li>
+            <li class="hover:text-white cursor-pointer">Clube de Vantagens</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-3">Fale Conosco</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="hover:text-white cursor-pointer">Chat Online</li>
+            <li class="hover:text-white cursor-pointer">Telefone</li>
+            <li class="hover:text-white cursor-pointer">WhatsApp</li>
+            <li class="hover:text-white cursor-pointer">Email</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-[#2c2c2c] my-4"></div>
+
+      <h4 class="text-center text-xs text-gray-500 leading-relaxed">
+        OrçaFácil — 2025 – © Todos os direitos reservados. LWSA – Filial OrçaFácil. CNPJ: 02.351.877/0011-24
+      </h4>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    const { jsPDF } = window.jspdf;
+
+    function gerarPDF(empresa, cnpj, produto, quantidade, precoUnitario, total, situacao) {
+      const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const pageHeight = doc.internal.pageSize.getHeight();
+      const margin = 15;
+
+      // Título
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(22);
+      doc.setTextColor(34, 197, 94);
+      doc.text('OrçaFácil', pageWidth / 2, 25, { align: 'center' });
+
+      // Informações principais
+      doc.setFontSize(12);
+      doc.setTextColor(0, 0, 0);
+      doc.text(`Empresa: ${empresa}`, margin, 40);
+      doc.text(`CNPJ: ${cnpj}`, margin, 48);
+      doc.text(`Data: ${new Date().toLocaleDateString('pt-BR')}`, pageWidth - margin, 40, { align: 'right' });
+
+      // Tabela
+      const tableY = 60;
+      const headers = ['Produto', 'Qtd', 'Preço Unitário', 'Total', 'Situação'];
+      const colWidths = [60, 20, 35, 35, 40];
+      const rowHeight = 10;
+
+      doc.setFillColor(34, 197, 94);
+      doc.setTextColor(255, 255, 255);
+      doc.setFont('helvetica', 'bold');
+
+      let x = margin;
+      headers.forEach((h, i) => {
+        doc.rect(x, tableY, colWidths[i], rowHeight, 'F');
+        doc.text(h, x + 2, tableY + 7);
+        x += colWidths[i];
+      });
+
+      // Dados
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(0, 0, 0);
+      x = margin;
+      const dados = [produto, quantidade, precoUnitario, total, situacao];
+      dados.forEach((d, i) => {
+        doc.rect(x, tableY + rowHeight, colWidths[i], rowHeight);
+        doc.text(String(d), x + 2, tableY + rowHeight + 7);
+        x += colWidths[i];
+      });
+
+      // Observações
+      const obsY = tableY + rowHeight * 2 + 10;
+      doc.setFontSize(10);
+      doc.setFont('helvetica', 'italic');
+      doc.text('Observações:', margin, obsY);
+      const observacoes = [
+        '- Este orçamento é válido por 10 dias úteis.',
+        '- Assinatura digital disponível via plataforma.',
+        '- Pagamento: 50% na aprovação e 50% na entrega.'
+      ];
+      observacoes.forEach((linha, i) => {
+        doc.text(linha, margin + 5, obsY + 8 + i * 6);
+      });
+
+      // Rodapé
+      doc.setDrawColor(200, 200, 200);
+      doc.line(margin, pageHeight - 17, pageWidth - margin, pageHeight - 17);
+      doc.setFontSize(9);
+      doc.setTextColor(120, 120, 120);
+      doc.text('OrçaFácil © 2025 — contato@orcafacil.com | (11) 1234-5678', pageWidth / 2, pageHeight - 10, { align: 'center' });
+
+      // Salvar PDF
+      doc.save(`Orcamento_${empresa.replace(/\s/g, '_')}.pdf`);
+    }
+  </script>
+</body>
+
+</html>
