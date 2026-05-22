@@ -7,7 +7,6 @@
   <title>OrçaFácil</title>
   
   <link rel="stylesheet" href="style.css" />
-  
   <script src="https://cdn.tailwindcss.com"></script>
   
   <script>
@@ -32,60 +31,66 @@
     body {
       font-family: 'Poppins', sans-serif;
     }
-    /* Oculta a barra de rolagem horizontal feia no Chrome/Safari/Firefox para o carrossel */
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 </head>
 
-<body class="bg-[#0a0a0a] text-white min-h-screen flex flex-col justify-between">
+<body class="bg-[#0a0a0a] text-white min-h-screen flex flex-col justify-between overflow-x-hidden">
 
-  <header class="flex flex-col md:flex-row justify-between items-center p-5 bg-card border-b border-inputBg gap-4">
+  <!-- HEADER TOTALMENTE RESPONSIVO -->
+  <header class="w-full flex flex-col md:flex-row justify-between items-center p-5 bg-card border-b border-inputBg gap-4">
     <div class="logo text-2xl font-black text-white">
       <a href="index.html">Orça<span class="text-marca">Fácil</span></a>
     </div>
-    <nav class="flex gap-5 text-sm md:text-base">
+    <nav class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm md:text-base">
       <a href="index.html" class="hover:text-marca transition-colors">Início</a>
       <a href="criarconta.html" class="hover:text-marca transition-colors">Meus Orçamentos</a>
       <a href="sobrenos.html" class="hover:text-marca transition-colors">Sobre Nós</a>
       <a href="planos.html" class="hover:text-marca transition-colors">Planos</a>
     </nav>
-    <a href="criarconta.html" class="bg-marca text-principal font-bold px-5 py-2 rounded-lg hover:bg-marcaHover transition-colors text-sm">
+    <a href="criarconta.html" class="bg-marca text-principal font-bold px-5 py-2 rounded-lg hover:bg-marcaHover transition-colors text-sm whitespace-nowrap">
       Criar Conta →
     </a>
   </header>
 
-  <section class="flex flex-col md:flex-row justify-between items-center rounded-[30px] px-10 py-5 my-16 mx-auto max-w-[1600px] gap-10">
-    <div class="max-w-[800px] text-center md:text-left">
-      <h1 class="text-4xl md:text-[44px] font-bold leading-tight mb-4">
-        Mais <span class="text-marca">organização e agilidade</span><br />com a ordem de serviço
+ <!-- HERO SECTION CORRIGIDA -->
+  <section class="w-full max-w-[1400px] mx-auto flex flex-col lg:flex-row justify-between items-center px-6 sm:px-10 py-12 lg:py-20 gap-10">
+    <div class="w-full lg:max-w-[55%] text-center lg:text-left flex flex-col items-center lg:items-start">
+      <h1 class="text-3xl sm:text-4xl md:text-[44px] font-bold leading-tight mb-4">
+        Mais <span class="text-marca">organização e agilidade</span><br class="hidden sm:inline" />com a ordem de serviço
       </h1>
-      <p class="text-xl md:text-[22px] text-gray-300 leading-relaxed mb-8">
-        Com as ordens de serviço, fica mais fácil controlar a execução do trabalho e fazer a gestão do negócio
+      <p class="text-lg md:text-[22px] text-gray-300 leading-relaxed mb-8 max-w-[650px]">
+        Com as ordens de serviço, fica mais fácil controlar a execução do trabalho e fazer a gestão do negócio.
       </p>
-      <a href="planos.html" class="inline-flex items-center border-2 border-detalhe font-semibold px-6 py-3.5 rounded-full text-xl hover:bg-detalhe transition-all text-white mt-4">
+      <a href="planos.html" class="inline-flex items-center border-2 border-detalhe font-semibold px-6 py-3.5 rounded-full text-lg md:text-xl hover:bg-detalhe transition-all text-white">
         Veja nossos planos →
       </a>
     </div>
-    <div class="w-full md:w-[650px] max-w-full">
-      <img class="w-full h-[400px] md:h-[600px] rounded-2xl object-cover shadow-[5px_5px_80px_rgba(61,185,107,0.37)]" 
+    <div class="w-full lg:max-w-[45%] flex justify-center">
+      <img class="w-full max-w-[550px] lg:max-w-full h-auto max-h-[650px] md:max-h-[800px] rounded-2xl object-cover shadow-[5px_5px_80px_rgba(61,185,107,0.25)]" 
         src="https://otimize.niuco.com.br/wp-content/uploads/2024/02/thumbs-3.png" alt="Banner OrçaFácil" />
     </div>
   </section>
 
-  <section class="bg-[#0a0a0a] py-20 px-4 md:px-10 text-center">
-    <h2 class="text-3xl md:text-[48px] font-bold text-white mb-2">Impulsione o negócio com a</h2>
-    <h3 class="text-3xl md:text-[48px] font-bold text-marca mb-12">gestão dos serviços</h3>
+  <!-- SEÇÃO DO CARROSSEL REESTRUTURADA -->
+  <section class="bg-[#0a0a0a] py-16 px-4 sm:px-10 text-center w-full max-w-[1500px] mx-auto relative">
+    <h2 class="text-2xl sm:text-3xl md:text-[48px] font-bold text-white mb-2 leading-tight">Impulsione o negócio com a</h2>
+    <h3 class="text-2xl sm:text-3xl md:text-[48px] font-bold text-marca mb-12 leading-tight">gestão dos serviços</h3>
 
-    <div class="relative max-w-[1400px] mx-auto flex items-center gap-4">
+    <!-- Container Flex que isola os botões fora do fluxo dos cards em telas menores -->
+    <div class="relative w-full flex items-center justify-center">
       
-      <button onclick="scrollCarrossel(-1)" class="w-12 h-12 rounded-full bg-marca text-principal hover:bg-marcaHover font-bold text-2xl flex items-center justify-center cursor-pointer shadow-lg active:scale-95 transition-all select-none shrink-0">
+      <!-- Botão Esquerdo (Oculto em Mobile para priorizar o Swiping/Touch natural) -->
+      <button onclick="scrollCarrossel(-1)" class="hidden md:flex w-12 h-12 rounded-full bg-marca text-principal hover:bg-marcaHover font-bold text-2xl items-center justify-center cursor-pointer shadow-lg active:scale-95 transition-all select-none shrink-0 mr-4">
         ‹
       </button>
 
-      <div id="carrosselTrilho" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar w-full py-4">
+      <!-- Trilho dos Cards (Utiliza Largura Máxima Controlada) -->
+      <div id="carrosselTrilho" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar w-full py-4 px-2">
         
-        <div class="bg-white text-[#1e293b] rounded-2xl p-6 md:p-8 min-w-[290px] md:min-w-[380px] flex-1 snap-center shadow-md flex flex-col justify-between h-[380px]">
+        <!-- Card 1 -->
+        <div class="bg-white text-[#1e293b] rounded-2xl p-6 md:p-8 min-w-[280px] sm:min-w-[340px] md:min-w-[380px] max-w-[400px] flex-1 snap-center shadow-md flex flex-col justify-between h-[380px]">
           <div>
             <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-marca">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
@@ -95,7 +100,8 @@
           </div>
         </div>
 
-        <div class="bg-white text-[#1e293b] rounded-2xl p-6 md:p-8 min-w-[290px] md:min-w-[380px] flex-1 snap-center shadow-md flex flex-col justify-between h-[380px]">
+        <!-- Card 2 -->
+        <div class="bg-white text-[#1e293b] rounded-2xl p-6 md:p-8 min-w-[280px] sm:min-w-[340px] md:min-w-[380px] max-w-[400px] flex-1 snap-center shadow-md flex flex-col justify-between h-[380px]">
           <div>
             <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-marca">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14,2 14,8 20,8"></polyline></svg>
@@ -105,7 +111,8 @@
           </div>
         </div>
 
-        <div class="bg-white text-[#1e293b] rounded-2xl p-6 md:p-8 min-w-[290px] md:min-w-[380px] flex-1 snap-center shadow-md flex flex-col justify-between h-[380px]">
+        <!-- Card 3 -->
+        <div class="bg-white text-[#1e293b] rounded-2xl p-6 md:p-8 min-w-[280px] sm:min-w-[340px] md:min-w-[380px] max-w-[400px] flex-1 snap-center shadow-md flex flex-col justify-between h-[380px]">
           <div>
             <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-marca">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
@@ -115,7 +122,8 @@
           </div>
         </div>
 
-        <div class="bg-white text-[#1e293b] rounded-2xl p-6 md:p-8 min-w-[290px] md:min-w-[380px] flex-1 snap-center shadow-md flex flex-col justify-between h-[380px]">
+        <!-- Card 4 -->
+        <div class="bg-white text-[#1e293b] rounded-2xl p-6 md:p-8 min-w-[280px] sm:min-w-[340px] md:min-w-[380px] max-w-[400px] flex-1 snap-center shadow-md flex flex-col justify-between h-[380px]">
           <div>
             <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-marca">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
@@ -125,7 +133,8 @@
           </div>
         </div>
 
-        <div class="bg-white text-[#1e293b] rounded-2xl p-6 md:p-8 min-w-[290px] md:min-w-[380px] flex-1 snap-center shadow-md flex flex-col justify-between h-[380px]">
+        <!-- Card 5 -->
+        <div class="bg-white text-[#1e293b] rounded-2xl p-6 md:p-8 min-w-[280px] sm:min-w-[340px] md:min-w-[380px] max-w-[400px] flex-1 snap-center shadow-md flex flex-col justify-between h-[380px]">
           <div>
             <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-marca">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14,2 14,8 20,8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line></svg>
@@ -135,7 +144,8 @@
           </div>
         </div>
 
-        <div class="bg-white text-[#1e293b] rounded-2xl p-6 md:p-8 min-w-[290px] md:min-w-[380px] flex-1 snap-center shadow-md flex flex-col justify-between h-[380px]">
+        <!-- Card 6 -->
+        <div class="bg-white text-[#1e293b] rounded-2xl p-6 md:p-8 min-w-[280px] sm:min-w-[340px] md:min-w-[380px] max-w-[400px] flex-1 snap-center shadow-md flex flex-col justify-between h-[380px]">
           <div>
             <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-marca">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
@@ -147,19 +157,21 @@
 
       </div>
 
-      <button onclick="scrollCarrossel(1)" class="w-12 h-12 rounded-full bg-marca text-principal hover:bg-marcaHover font-bold text-2xl flex items-center justify-center cursor-pointer shadow-lg active:scale-95 transition-all select-none shrink-0">
+      <!-- Botão Direito -->
+      <button onclick="scrollCarrossel(1)" class="hidden md:flex w-12 h-12 rounded-full bg-marca text-principal hover:bg-marcaHover font-bold text-2xl items-center justify-center cursor-pointer shadow-lg active:scale-95 transition-all select-none shrink-0 ml-4">
         ›
       </button>
     </div>
   </section>
 
-  <footer class="bg-card text-gray-400 py-10 px-6 border-t border-inputBg">
+  <!-- FOOTER GRID REPARADO -->
+  <footer class="bg-card text-gray-400 py-10 px-6 border-t border-inputBg w-full">
     <div class="max-w-6xl mx-auto flex flex-col gap-8">
       
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
         <div>
-          <h4 class="text-white font-bold mb-3">OrçaFácil</h4>
-          <ul class="space-y-2 text-sm">
+          <h4 class="text-white font-bold mb-3 text-sm sm:text-base">OrçaFácil</h4>
+          <ul class="space-y-2 text-xs sm:text-sm">
             <li class="hover:text-white cursor-pointer">Conheça o OrçaFácil</li>
             <li class="hover:text-white cursor-pointer">Planos e Preços</li>
             <li class="hover:text-white cursor-pointer">Contato</li>
@@ -171,8 +183,8 @@
         </div>
 
         <div>
-          <h4 class="text-white font-bold mb-3">Usando OrçaFácil</h4>
-          <ul class="space-y-2 text-sm">
+          <h4 class="text-white font-bold mb-3 text-sm sm:text-base">Usando OrçaFácil</h4>
+          <ul class="space-y-2 text-xs sm:text-sm">
             <li class="hover:text-white cursor-pointer">Orça Academy</li>
             <li class="hover:text-white cursor-pointer">Implantação Guiada</li>
             <li class="hover:text-white cursor-pointer">Treinamento ao vivo</li>
@@ -183,8 +195,8 @@
         </div>
 
         <div>
-          <h4 class="text-white font-bold mb-3">Parceiros</h4>
-          <ul class="space-y-2 text-sm">
+          <h4 class="text-white font-bold mb-3 text-sm sm:text-base">Parceiros</h4>
+          <ul class="space-y-2 text-xs sm:text-sm">
             <li class="hover:text-white cursor-pointer">Parceiros Top Especialistas</li>
             <li class="hover:text-white cursor-pointer">Parceiros Afiliados</li>
             <li class="hover:text-white cursor-pointer">API e Aplicativos</li>
@@ -193,8 +205,8 @@
         </div>
 
         <div>
-          <h4 class="text-white font-bold mb-3">Fale Conosco</h4>
-          <ul class="space-y-2 text-sm">
+          <h4 class="text-white font-bold mb-3 text-sm sm:text-base">Fale Conosco</h4>
+          <ul class="space-y-2 text-xs sm:text-sm">
             <li class="hover:text-white cursor-pointer">Chat Online</li>
             <li class="hover:text-white cursor-pointer">Telefone</li>
             <li class="hover:text-white cursor-pointer">WhatsApp</li>
@@ -206,19 +218,13 @@
       <div class="border-t border-inputBg my-4"></div>
 
       <h4 class="text-center text-xs text-gray-500 leading-relaxed">
-        OrçaFácil — 2025 – © Todos os direitos reservados. LWSA – Filial OrçaFácil. CNPJ: 02.351.877/0011-24
+        OrçaFácil — 2025 – © Todos os direitos reservados. LWSA – Filial OrçaFácil. CNPJ: 00.000.000/0000-00
       </h4>
     </div>
   </footer>
 
-  <script>
-    function scrollCarrossel(direcao) {
-      const trilho = document.getElementById("carrosselTrilho");
-      const tamanhoDoCard = trilho.querySelector("div").offsetWidth + 24;
-      
-      trilho.scrollLeft += (tamanhoDoCard * direcao);
-    }
-  </script>
+  <script src="scriptindex.js"></script>
+
 </body>
 
 </html>
